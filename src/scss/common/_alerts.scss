@@ -1,0 +1,239 @@
+.alerts {
+	font-size: $alerts-text-fz;
+	font-family: $alerts-ff;
+	margin-right: 3rem;
+	color: $alerts-text-color;
+
+	&-title {
+		font-weight: 700;
+	}
+
+	&-mode {
+		margin-bottom: 4rem;
+	}
+
+	&-normal {
+		padding: 0.5rem 1.5rem;
+		position: relative;
+		width: 60rem;
+		height: 3rem;
+		background-color: $alerts-normal-bg;
+
+		&__text {
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			overflow: hidden;
+		}
+
+		&__left {
+			&::before {
+				cursor: pointer;
+				transform: rotate(45deg);
+				border: 1rem solid transparent;
+				bottom: 2rem;
+				border-bottom-color: $alerts-normal-bg;
+				content: '';
+				height: 0;
+				left: -0.8rem;
+				position: absolute;
+				width: 0;
+			}
+		}
+
+		&__top {
+			&::before {
+				cursor: pointer;
+				transform: rotate(45deg);
+				border: 1rem solid $alerts-normal-bg;
+				bottom: 2rem;
+				border-left-color: transparent;
+				border-bottom-color: transparent;
+				content: '';
+				height: 0;
+				left: -1rem;
+				position: absolute;
+				width: 0;
+			}
+		}
+	}
+
+	&-info {
+		padding: 0.5rem 1.5rem;
+		position: relative;
+		width: 60rem;
+		height: 3rem;
+		background-color: $alerts-info-bg;
+
+		&__text {
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			overflow: hidden;
+		}
+
+		&__left {
+			&::before {
+				cursor: pointer;
+				transform: rotate(45deg);
+				border: 1rem solid transparent;
+				bottom: 2rem;
+				border-bottom-color: $alerts-info-bg;
+				content: '';
+				height: 0;
+				left: -0.8rem;
+				position: absolute;
+				width: 0;
+			}
+		}
+
+		&__top {
+			&::before {
+				cursor: pointer;
+				transform: rotate(45deg);
+				border: 1rem solid $alerts-info-bg;
+				bottom: 2rem;
+				border-left-color: transparent;
+				border-bottom-color: transparent;
+				content: '';
+				height: 0;
+				left: -1rem;
+				position: absolute;
+				width: 0;
+			}
+		}
+	}
+
+	&-success {
+		padding: 0.5rem 1.5rem;
+		position: relative;
+		width: 60rem;
+		height: 3rem;
+		background-color: $alerts-success-bg;
+
+		&__text {
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			overflow: hidden;
+		}
+
+		&__left {
+			&::before {
+				cursor: pointer;
+				transform: rotate(45deg);
+				border: 1rem solid transparent;
+				bottom: 2rem;
+				border-bottom-color: $alerts-success-bg;
+				content: '';
+				height: 0;
+				left: -0.8rem;
+				position: absolute;
+				width: 0;
+			}
+		}
+
+		&__top {
+			&::before {
+				cursor: pointer;
+				transform: rotate(45deg);
+				border: 1rem solid $alerts-success-bg;
+				bottom: 2rem;
+				border-left-color: transparent;
+				border-bottom-color: transparent;
+				content: '';
+				height: 0;
+				left: -1rem;
+				position: absolute;
+				width: 0;
+			}
+		}
+	}
+
+	&-warning {
+		padding: 0.5rem 1.5rem;
+		position: relative;
+		width: 60rem;
+		height: 3rem;
+		background-color: $alerts-warning-bg;
+
+		&__text {
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			overflow: hidden;
+		}
+
+		&__left {
+			&::before {
+				cursor: pointer;
+				transform: rotate(45deg);
+				border: 1rem solid transparent;
+				bottom: 2rem;
+				border-bottom-color: $alerts-warning-bg;
+				content: '';
+				height: 0;
+				left: -0.8rem;
+				position: absolute;
+				width: 0;
+			}
+		}
+
+		&__top {
+			&::before {
+				cursor: pointer;
+				transform: rotate(45deg);
+				border: 1rem solid $alerts-warning-bg;
+				bottom: 2rem;
+				border-left-color: transparent;
+				border-bottom-color: transparent;
+				content: '';
+				height: 0;
+				left: -1rem;
+				position: absolute;
+				width: 0;
+			}
+		}
+	}
+
+	&-error {
+		padding: 0.5rem 1.5rem;
+		position: relative;
+		width: 60rem;
+		height: 3rem;
+		background-color: $alerts-error-bg;
+
+		&__text {
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			overflow: hidden;
+		}
+
+		&__left {
+			&::before {
+				cursor: pointer;
+				transform: rotate(45deg);
+				border: 1rem solid transparent;
+				bottom: 2rem;
+				border-bottom-color: $alerts-error-bg;
+				content: '';
+				height: 0;
+				left: -0.8rem;
+				position: absolute;
+				width: 0;
+			}
+		}
+
+		&__top {
+			&::before {
+				cursor: pointer;
+				transform: rotate(45deg);
+				border: 1rem solid $alerts-error-bg;
+				bottom: 2rem;
+				border-left-color: transparent;
+				border-bottom-color: transparent;
+				content: '';
+				height: 0;
+				left: -1rem;
+				position: absolute;
+				width: 0;
+			}
+		}
+	}
+}

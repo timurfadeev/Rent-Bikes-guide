@@ -1,0 +1,245 @@
+.btn {
+	cursor: pointer;
+	display: inline-block;
+	text-transform: uppercase;
+	text-align: center;
+	font-family: $btn-ff;
+	transition: all 0.2s ease-in;
+
+	&-title {
+		color: $text-white;
+	}
+
+	&-groups {
+
+		&+& {
+			margin-left: 4rem;
+		}
+	}
+
+	&--lg {
+		font-size: $btn-fz-lg;
+		padding: 1.5rem 4rem;
+		position: relative;
+		margin-top: 2.5rem;
+
+		&-angle {
+
+			&::after {
+				cursor: pointer;
+				border: 2rem solid transparent;
+				border-left-color: black;
+				bottom: -0.3rem;
+				border-left-color: transparent;
+				border-bottom-color: rgba(0, 0, 0, 0.20);
+				content: '';
+				height: 0;
+				right: -2rem;
+				position: absolute;
+				width: 0;
+			}
+		}
+	}
+
+	&--sm {
+		font-size: $btn-fz-sm;
+		padding: 1.2rem 3rem;
+		position: relative;
+		margin-top: 4rem;
+
+		&-angle {
+
+			&::after {
+				cursor: pointer;
+				border: 2rem solid transparent;
+				border-left-color: black;
+				bottom: -0.22rem;
+				border-left-color: transparent;
+				border-bottom-color: rgba(0, 0, 0, 0.20);
+				content: '';
+				height: 0;
+				right: -2rem;
+				position: absolute;
+				width: 0;
+			}
+		}
+	}
+
+	&--default {
+		background-color: $btn-default-bg;
+		color: $btn-default-text;
+
+		&:hover {
+			background-color: $btn-default-bg-hvr;
+		}
+	}
+
+	&--secondary {
+		background-color: $btn-secondary-bg;
+		color: $btn-secondary-text;
+
+		&:hover {
+			background-color: $btn-secondary-bg-hvr;
+		}
+	}
+
+	&--primary {
+		background-color: $btn-primary-bg;
+		color: $btn-primary-text;
+
+		&:hover {
+			background-color: $btn-primary-bg-hvr;
+		}
+	}
+
+	&--disabled {
+		background-color: $btn-disabled-bg;
+		color: $btn-disabled-text;
+
+		&:hover {
+			background-color: $btn-disabled-bg;
+			cursor: not-allowed;
+		}
+	}
+}
+
+// btn ghost
+.btn {
+
+	&-bg {
+		background: url(../images/footer-bg.jpg) no-repeat center / cover;
+	}
+
+	&-ghost {
+		cursor: pointer;
+		display: inline-block;
+		text-transform: uppercase;
+		text-align: center;
+		position: relative;
+		font-family: $btn-ff;
+		transition: all 0.2s ease-in;
+
+		&--lg {
+			font-size: $btn-fz-lg;
+			padding: 1.5rem 4rem;
+			margin-top: 2.5rem;
+		}
+
+		&--sm {
+			font-size: $btn-fz-sm;
+			padding: 1.2rem 3rem;
+			margin-top: 4rem;
+		}
+
+		&--default {
+			background-color: transparent;
+			color: $btn-default-text;
+			border: 0.2rem solid #fff;
+
+			&__angle:hover {
+
+				&::after {
+					cursor: pointer;
+					border: 2rem solid transparent;
+					border-left-color: black;
+					bottom: -0.2rem;
+					border-left-color: transparent;
+					border-bottom-color: #fff;
+					content: '';
+					height: 0;
+					right: -2.2rem;
+					position: absolute;
+					width: 0;
+				}
+			}
+		}
+
+		&--secondary {
+			background-color: transparent;
+			color: $btn-secondary-text;
+			border: 0.2rem solid #99cc00;
+
+			&__angle:hover {
+
+				&::after {
+					cursor: pointer;
+					border: 2rem solid transparent;
+					border-left-color: black;
+					bottom: -0.2rem;
+					border-left-color: transparent;
+					border-bottom-color: #99cc00;
+					content: '';
+					height: 0;
+					right: -2.2rem;
+					position: absolute;
+					width: 0;
+				}
+			}
+		}
+
+		&--primary {
+			background-color: transparent;
+			color: $text-green;
+			border: 0.2rem solid #99cc00;
+
+			&__angle:hover {
+
+				&::after {
+					cursor: pointer;
+					border: 2rem solid transparent;
+					border-left-color: black;
+					bottom: -0.2rem;
+					border-left-color: transparent;
+					border-bottom-color: #99cc00;
+					content: '';
+					height: 0;
+					right: -2.2rem;
+					position: absolute;
+					width: 0;
+				}
+			}
+		}
+	}
+}
+
+// App Store Buttons
+.stores-buttons {
+	margin-top: 2.5rem;
+	font-size: 2rem;
+
+	&__icon {
+		cursor: pointer;
+		position: absolute;
+	}
+
+	&__primary {
+		background-color: #333;
+		color: $text-white;
+		text-transform: uppercase;
+		font-family: $secondary-font;
+		width: 24.5rem;
+		height: 6rem;
+	}
+
+	&__secondary {
+		background-color: #1dafc2;
+		color: $text-white;
+		font-family: $secondary-font;
+		width: 24.5rem;
+		height: 6rem;
+		text-transform: uppercase;
+	}
+
+	&__tertiary {
+		background-color: #00bbff;
+		color: $text-white;
+		font-family: $secondary-font;
+		width: 24.5rem;
+		height: 6rem;
+		text-transform: uppercase;
+	}
+
+	&+& {
+		margin-left: 5.2rem;
+	}
+}

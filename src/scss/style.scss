@@ -1,0 +1,18 @@
+// Variables
+@import 'variables';
+
+// Libs 'fontawesome'
+@import 'node_modules/@fortawesome/fontawesome-free/scss/fontawesome';
+@import 'node_modules/@fortawesome/fontawesome-free/scss/regular';
+@import 'node_modules/@fortawesome/fontawesome-free/scss/solid';
+
+// Our components
+@import 'reset';
+@import 'mixins/index';
+@import 'common/index';
+@import 'components/index';
+@import 'grid/index';
+@import 'layout/index';
+
+// Libs 'slick slider'
+@import 'libs/index';

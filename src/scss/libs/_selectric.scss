@@ -1,0 +1,459 @@
+$selectric-main-color: #DDD !default; // Color used in border
+$selectric-secondary-color: #BBB !default; // Color used in button
+$selectric-text-color: #444 !default; // Color used in label
+$selectric-bg-color: #F8F8F8 !default; // Background color
+$selectric-btn-bg-color: #F8f8f8 !default; // Button background color
+$selectric-height: 40px !default; // Outer height
+$selectric-spacing: 10px !default; // Label left padding
+$selectric-border-width: 2px !default; // Outer border width
+$selectric-border-radius: 0px !default; // Border radius
+$selectric-inner-height: $selectric-height - ($selectric-border-width * 2) !default; // Inner height
+$selectric-font-size: 12px !default; // Font size
+
+.selectric-wrapper {
+  position: relative;
+  cursor: pointer;
+}
+
+.selectric-responsive {
+  width: 100%;
+}
+
+.selectric {
+  border: $selectric-border-width solid $form-control-border-color;
+  border-radius: $selectric-border-radius;
+  background: $form-control-bg-color;
+  position: relative;
+  overflow: hidden;
+
+  .label {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0 $selectric-inner-height 0 $selectric-spacing;
+    font-size: $form-control-fz;
+    line-height: 4rem;
+    color: $form-control-text-color;
+    height: $form-control-height;
+    user-select: none;
+  }
+
+  .button {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: $selectric-inner-height;
+    height: $selectric-inner-height;
+    line-height: $selectric-inner-height;
+    background-color: $selectric-btn-bg-color;
+    color: $selectric-secondary-color;
+    text-align: center;
+    font: 0/0 a;
+    *font: 20px/#{$selectric-inner-height} Lucida Sans Unicode,
+    Arial Unicode MS,
+    Arial;
+
+    &:after {
+      content: "";
+      position: absolute;
+      right: -10px;
+      bottom: -12px;
+      width: 0;
+      transform: rotate(-45deg);
+      height: 0;
+      border: 10px solid transparent;
+      border-top-color: $form-control-border-color;
+      border-bottom: none;
+    }
+  }
+}
+
+.selectric-focus .selectric {
+  border-color: darken($selectric-main-color, 20%);
+}
+
+.selectric-hover .selectric {
+  border-color: #8d8d8d;
+
+  .button {
+    color: darken($selectric-secondary-color, 10%);
+
+    &:after {
+      border-top-color: darken($selectric-secondary-color, 10%);
+    }
+  }
+}
+
+.selectric-open {
+  z-index: 9999;
+
+  .selectric {
+    background-color: $form-control-bg-color;
+    border-color: $form-control-active-border-color;
+
+    .label {
+      color: $form-control-active-text-color;
+    }
+
+    .button {
+      &::after {
+        border-top-color: $form-control-active-border-color;
+      }
+    }
+  }
+
+  .selectric-items {
+    display: block;
+  }
+}
+
+.selectric-disabled {
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+  cursor: default;
+  user-select: none;
+}
+
+.selectric-hide-select {
+  position: relative;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+
+  select {
+    position: absolute;
+    left: -100%;
+  }
+
+  &.selectric-is-native {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+
+    select {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      border: none;
+      z-index: 1;
+      box-sizing: border-box;
+      opacity: 0;
+    }
+  }
+}
+
+.selectric-input {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 1px !important;
+  height: 1px !important;
+  outline: none !important;
+  border: none !important;
+  *font: 0/0 a !important;
+  background: none !important;
+}
+
+.selectric-temp-show {
+  position: absolute !important;
+  visibility: hidden !important;
+  display: block !important;
+}
+
+/* Items box */
+.selectric-items {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: -1;
+  box-shadow: 0 0 10px -6px;
+
+  .selectric-scroll {
+    height: 100%;
+    overflow: auto;
+  }
+
+  .selectric-above & {
+    top: auto;
+    bottom: 100%;
+  }
+
+  ul,
+  li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: $form-control-ff;
+    line-height: 1;
+    min-height: 20px;
+  }
+
+  li {
+    display: block;
+    font-size: 15px;
+    padding: 13px 12px;
+    background-color: $form-control-selection-bg-color;
+    color: $form-control-selection-color;
+    cursor: pointer;
+
+    &.selected {
+      background-color: $form-control-selection-bg-color;
+      color: $form-control-selection-color;
+    }
+
+    &.highlighted {
+      background-color: $form-control-selection-bg-color;
+      color: $form-control-selection-color;
+    }
+
+    &:hover {
+      background: $form-control-selection-bg-hvr-color;
+      color: $form-control-selection-color;
+    }
+  }
+
+  .disabled {
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+    cursor: default !important;
+    background: none !important;
+    color: #666 !important;
+    user-select: none;
+  }
+
+  .selectric-group {
+    .selectric-group-label {
+      font-weight: bold;
+      padding-left: 10px;
+      cursor: default;
+      user-select: none;
+      background: none;
+      color: #444;
+    }
+
+    &.disabled li {
+      filter: alpha(opacity=100);
+      opacity: 1;
+    }
+
+    li {
+      padding-left: 25px;
+    }
+  }
+}
+
+// Selectric Ghost
+.selectric-wrapper.selectric-form-control__select.selectric-ghost-select.selectric-open.selectric-above {
+  .form__disabled {
+    display: none;
+  }
+}
+
+.selectric-wrapper.selectric-form-control__select.selectric-ghost-select .selectric {
+  border: none;
+  border-top: 2px solid $selectric-border-color;
+  border-bottom: 2px solid $selectric-border-color;
+  background-color: transparent;
+
+  .button {
+    background-color: transparent;
+
+    &:after {
+      content: "";
+      position: absolute;
+      right: 10px;
+      bottom: 5px;
+      width: 0;
+      transform: rotate(-45deg);
+      height: 0;
+      border: 10px solid transparent;
+      border-top-color: $selectric-border-active;
+      border-bottom: none;
+    }
+  }
+}
+
+.selectric-wrapper.selectric-form-control__select.selectric-ghost-select.selectric-focus .selectric {
+  border-color: $selectric-border-active;
+}
+
+.selectric-hover .selectric .button {
+  &:after {
+    border-top-color: darken($selectric-secondary-color, 10%);
+  }
+}
+
+.selectric-open {
+  z-index: 9999;
+
+  .selectric {
+    .label {
+      color: $form-control-active-text-color;
+    }
+
+    .button {
+      &::after {
+        border-top-color: $form-control-active-border-color;
+      }
+    }
+  }
+
+  .selectric-items {
+    display: block;
+  }
+}
+
+.selectric-disabled {
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+  cursor: default;
+  user-select: none;
+}
+
+.selectric-hide-select {
+  position: relative;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+
+  select {
+    position: absolute;
+    left: -100%;
+  }
+
+  &.selectric-is-native {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+
+    select {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      border: none;
+      z-index: 1;
+      box-sizing: border-box;
+      opacity: 0;
+    }
+  }
+}
+
+.selectric-input {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 1px !important;
+  height: 1px !important;
+  outline: none !important;
+  border: none !important;
+  *font: 0/0 a !important;
+  background: none !important;
+}
+
+.selectric-temp-show {
+  position: absolute !important;
+  visibility: hidden !important;
+  display: block !important;
+}
+
+/* Items box */
+.selectric-wrapper.selectric-form-control__select.selectric-ghost-select.selectric-below.selectric-open.selectric-focus.selectric-items {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: -1;
+  box-shadow: 0 0 10px -6px;
+
+  .selectric-scroll {
+    height: 100%;
+    overflow: auto;
+  }
+
+  .selectric-above & {
+    top: auto;
+    bottom: 100%;
+  }
+
+  ul,
+  li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: $form-control-ff;
+    line-height: 1;
+    min-height: 20px;
+  }
+
+  li {
+    display: block;
+    font-size: 15px;
+    padding: 2px;
+    background-color: $form-control-selection-bg-color;
+    color: $form-control-selection-color;
+    cursor: pointer;
+
+    &.selected {
+      background-color: $form-control-selection-bg-color;
+      color: $form-control-selection-color;
+    }
+
+    &.highlighted {
+      background-color: $form-control-selection-bg-color;
+      color: $form-control-selection-color;
+    }
+
+    &:hover {
+      background: $form-control-selection-bg-hvr-color;
+      color: $form-control-selection-color;
+    }
+  }
+
+  .disabled {
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+    cursor: default !important;
+    background: none !important;
+    color: #666 !important;
+    user-select: none;
+  }
+
+  .selectric-group {
+    .selectric-group-label {
+      font-weight: bold;
+      padding-left: 10px;
+      cursor: default;
+      user-select: none;
+      background: none;
+      color: #444;
+    }
+
+    &.disabled li {
+      filter: alpha(opacity=100);
+      opacity: 1;
+    }
+
+    li {
+      padding-left: 25px;
+    }
+  }
+}

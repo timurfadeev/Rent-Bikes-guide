@@ -1,0 +1,130 @@
+.product-item {
+	margin-top: 2.5rem;
+	overflow: hidden;
+
+	&__img {
+		display: flex;
+		justify-content: center;
+		height: 28.5rem;
+		position: relative;
+
+		&>img {
+			height: 100%;
+			max-width: none;
+		}
+	}
+
+	&__type {
+		color: $text-white;
+		font-size: 1.5rem;
+		font-family: $secondary-font;
+		top: 2rem;
+		left: 2rem;
+		position: absolute;
+	}
+
+	&__equipment {
+		align-items: center;
+		bottom: 2rem;
+		left: 2rem;
+		position: absolute;
+
+		&-item {
+			&+& {
+				margin-left: 2.5rem;
+			}
+		}
+	}
+
+	&__name {
+
+		&-title {
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			color: $text-white;
+			background-color: $bg-blue;
+			font-family: $secondary-font;
+			font-size: 2.5rem;
+			padding: 3rem 2rem;
+			position: relative;
+			text-transform: uppercase;
+
+			&::after {
+				cursor: pointer;
+				border: 2rem solid transparent;
+				border-left-color: black;
+				bottom: 8.6rem;
+				border-left-color: transparent;
+				border-bottom-color: $bg-blue;
+				content: '';
+				height: 0;
+				right: -2rem;
+				position: absolute;
+				width: 0;
+			}
+		}
+	}
+
+	&__details {
+		border: 0.2rem solid #f0f3f7;
+
+		&:hover {
+			transition: all 0.3s ease-in;
+			border: 0.2rem solid #658099;
+		}
+	}
+
+	&__price {
+
+		&-item {
+			align-items: center;
+			padding: 2rem;
+
+			&:hover {
+				transition: all 0.2s ease-in;
+				background-color: #f0f3f7;
+			}
+		}
+
+		&-time {
+			color: #a6b7c7;
+			font-size: 1.5rem;
+		}
+
+		&-value {
+			margin-left: auto;
+			font-family: $secondary-font;
+			font-size: 2.2rem;
+			color: $text-blue;
+		}
+	}
+
+	&__action {
+		padding-bottom: 3rem;
+		display: flex;
+		justify-content: center;
+
+		&-angle {
+
+			&::after {
+				cursor: pointer;
+				border: 2rem solid transparent;
+				border-left-color: black;
+				bottom: 0;
+				border-left-color: transparent;
+				border-bottom-color: rgba(0, 0, 0, 0.20);
+				content: '';
+				height: 0;
+				right: -2rem;
+				position: absolute;
+				width: 0;
+			}
+		}
+
+		&:hover {
+			transition: all 0.2s ease-in;
+			background-color: #f0f3f7;
+		}
+	}
+}

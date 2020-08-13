@@ -1,0 +1,22 @@
+.marked {
+
+	&__title {
+		margin-bottom: 2.5rem;
+		color: $text-blue;
+		font-size: $fz-title;
+		text-transform: uppercase;
+		font-weight: normal;
+		font-family: $secondary-font;
+	}
+
+	&__icon-square {
+		font-size: $fz-check;
+		color: $text-blue;
+	}
+
+	&__text {
+		font-size: $fz-list;
+		line-height: $lh-section;
+		margin-left: 2rem;
+	}
+}

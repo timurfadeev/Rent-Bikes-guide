@@ -1,0 +1,160 @@
+.radiobutton {
+	margin-left: 5rem;
+	&+& {
+		margin-top: 4rem;
+	}
+}
+
+// Large radio button
+.lg-radio {
+	cursor: pointer;
+	position: relative;
+
+	&__title {
+		margin-left: 5rem;
+		display: block;
+		font-size: 1.8rem;
+	}
+
+	&__input {
+		display: none;
+	}
+
+	&:before {
+		content: '';
+		width: 0;
+		height: 0;
+		padding: 1rem;
+		position: absolute;
+		top: 1rem;
+		border-radius: 50%;
+		z-index: 2;
+		left: 1rem;
+	}
+}
+
+.lg-radio__label {
+	position: absolute;
+	cursor: pointer;
+	left: 0;
+	top: 25%;
+	background-color: $checkbox-bg-color;
+	width: 4rem;
+	height: 4rem;
+	border-radius: 50%;
+	border: 0.2rem solid $checkbox-border-color;
+}
+
+.lg-radio__input:checked+.lg-radio .lg-radio__label {
+	border: 0.2rem solid $checkbox-active-bg-color;
+	background-color: $checkbox-bg-color;
+}
+
+.lg-radio__input:checked+.lg-radio {
+	&::before {
+		background-color: $checkbox-active-bg-color;
+	}
+}
+
+// Normal radio button
+.md-radio {
+	cursor: pointer;
+	position: relative;
+
+	&__title {
+		margin-left: 4rem;
+		display: block;
+		font-size: 1.6rem;
+	}
+
+	&__input {
+		display: none;
+	}
+
+	&:before {
+		content: '';
+		width: 0;
+		height: 0;
+		padding: 0.7rem;
+		position: absolute;
+		top: 0.8rem;
+		cursor: pointer;
+		border-radius: 50%;
+		z-index: 2;
+		left: 0.8rem;
+	}
+}
+
+.md-radio__label {
+	position: absolute;
+	cursor: pointer;
+	left: 0;
+	top: 25%;
+	background-color: $checkbox-bg-color;
+	width: 3rem;
+	height: 3rem;
+	border-radius: 50%;
+	border: 0.2rem solid $checkbox-border-color;
+}
+
+.md-radio__input:checked+.md-radio .md-radio__label {
+	border: 0.2rem solid $checkbox-active-bg-color;
+	background-color: $checkbox-bg-color;
+}
+
+.md-radio__input:checked+.md-radio {
+	&::before {
+		background-color: $checkbox-active-bg-color;
+	}
+}
+
+// Small radio button
+.sm-radio {
+	cursor: pointer;
+	position: relative;
+
+	&__title {
+		margin-left: 3rem;
+		display: block;
+		font-size: 1.4rem;
+	}
+
+	&__input {
+		display: none;
+	}
+
+	&:before {
+		content: '';
+		width: 0;
+		height: 0;
+		padding: 0.4rem;
+		position: absolute;
+		top: 0.6rem;
+		border-radius: 50%;
+		z-index: 2;
+		left: 0.6rem;
+	}
+}
+
+.sm-radio__label {
+	position: absolute;
+	cursor: pointer;
+	left: 0;
+	top: 25%;
+	background-color: $checkbox-bg-color;
+	width: 2rem;
+	height: 2rem;
+	border-radius: 50%;
+	border: 0.2rem solid $checkbox-border-color;
+}
+
+.sm-radio__input:checked+.sm-radio .sm-radio__label {
+	border: 0.2rem solid $checkbox-active-bg-color;
+	background-color: $checkbox-bg-color;
+}
+
+.sm-radio__input:checked+.sm-radio {
+	&::before {
+		background-color: $checkbox-active-bg-color;
+	}
+}

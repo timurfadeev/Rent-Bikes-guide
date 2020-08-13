@@ -1,0 +1,25 @@
+.preform {
+
+	&__title {
+		margin-bottom: 2.5rem;
+		color: $text-blue;
+		font-size: $fz-title;
+		text-transform: uppercase;
+		font-weight: normal;
+		font-family: $secondary-font;
+	}
+
+	&__text {
+		font-size: $fz-list;
+		margin-bottom: 2.5rem;
+		line-height: $lh-section;
+	}
+
+	&-pre__text {
+		background: $bg-pre;
+		width: 67rem;
+		padding: 1rem 0 0;
+		font-size: $fz-list;
+		color: $text-pre;
+	}
+}

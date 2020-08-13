@@ -1,0 +1,60 @@
+.tags {
+	margin-top: 2.5rem;
+
+	&__items {
+		font-size: 1.5rem;
+		font-family: $secondary-font;
+		text-transform: uppercase;
+		padding: 1rem 1rem;
+		border: 0.2rem solid #dfe2e6;
+		color: $text-gray;
+
+		&:hover {
+			border: 0.2rem solid #658099;
+			background-color: $bg-blue;
+			color: $text-white;
+		}
+	}
+
+	&-list {
+		font-size: 1.5rem;
+		width: 72rem;
+		margin-bottom: 4rem;
+		padding: 1.3rem 2.5rem;
+		border: 0.2rem solid #dfe2e6;
+		font-family: $secondary-font;
+		text-transform: uppercase;
+		color: #cbced2;
+
+		&__items {
+			cursor: pointer;
+			color: $text-gray;
+
+			&:hover {
+				color: #658099;
+			}
+
+			&+& {
+				margin-left: 2.5rem;
+			}
+		}
+	}
+}
+
+// tags groups
+.tags-groups {
+
+	&+& {
+		margin-left: 1rem;
+	}
+}
+
+// tags trinket
+.tags-trinket__icon {
+	margin-left: 1.4rem;
+	margin-right: 2.2rem;
+}
+
+.tags-trinket__icon-bg {
+	margin-right: 1rem;
+}

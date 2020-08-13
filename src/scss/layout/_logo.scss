@@ -1,0 +1,13 @@
+.logo {
+	&__text {
+		font-size: 3rem;
+		font-family: $secondary-font;
+		text-transform: uppercase;
+		color: $text-white;
+		margin: 0 0.2rem;
+		margin-top: 0.7rem;
+		&--big {
+			font-size: 5.5rem;
+		}
+	}
+}

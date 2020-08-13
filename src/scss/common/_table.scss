@@ -1,0 +1,46 @@
+.table-item {
+
+	&__th {
+		font-size: $fz-list;
+		border: 0.1rem solid white;
+		background-color: $bg-pre;
+		padding: 2rem;
+		font-weight: 900;
+
+		&-title {
+			text-align: left;
+		}
+	}
+
+	&__td {
+		font-size: $fz-list;
+		border: 4px solid white;
+		background-color: $bg-pre;
+		padding: 2rem;
+
+		&-name {
+			width: 13.5rem;
+		}
+
+		&-cash {
+			width: 10rem;
+		}
+
+		&-text {
+			width: 93rem;
+		}
+	}
+
+	&__bg {
+		background-color: $bg-white;
+	}
+}
+
+.table__title {
+	margin-bottom: 2.5rem;
+	color: $text-blue;
+	font-size: $fz-title;
+	text-transform: uppercase;
+	font-weight: normal;
+	font-family: $secondary-font;
+}

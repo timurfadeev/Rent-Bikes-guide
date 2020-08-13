@@ -1,0 +1,47 @@
+.marked-ordered {
+
+	&__title {
+		margin-bottom: 2.5rem;
+		color: $text-blue;
+		font-size: $fz-title;
+		text-transform: uppercase;
+		font-weight: normal;
+		font-family: $secondary-font;
+	}
+
+	&__icon-square {
+		font-size: $fz-check;
+		color: $text-blue;
+	}
+
+	&__icon-circle {
+		font-size: $fz-check;
+		color: $text-blue;
+	}
+
+	&-list__icon {
+		text-align: center;
+		margin-left: 2.8rem;
+	}
+
+	&__text {
+		font-size: $fz-list;
+		line-height: $lh-section;
+		margin-left: 2rem;
+	}
+
+	&__item-top {
+		line-height: $lh-section;
+		font-size: $fz-list;
+		margin-left: 4.2rem;
+	}
+
+	&__item-bottom {
+		line-height: $lh-section;
+		font-size: $fz-list;
+	}
+
+	&__num {
+		margin-left: 2.5rem;
+	}
+}

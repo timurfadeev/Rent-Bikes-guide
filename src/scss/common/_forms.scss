@@ -1,0 +1,88 @@
+.form-control {
+	position: relative;
+	width: 100%;
+
+	&__input {
+		font-family: $form-control-ff;
+		font-size: $form-control-fz;
+		line-height: 1;
+		padding-right: 4rem;
+		height: 4.5rem;
+		width: 100%;
+		padding-left: 1.5rem;
+		color: $form-control-text-color;
+		border: 0.2rem solid $form-control-border-color;
+		background-color: $form-control-bg-color;
+		transition:
+			color 0.2s ease-in,
+			border-color 0.2s ease-in,
+			background-color 0.2s ease-in
+		;
+
+		&--textarea {
+			transition: none;
+			height: auto;
+			max-height: 45rem;
+			min-height: 18rem;
+			padding-top: 1rem;
+		}
+
+		&:focus {
+			color: $form-control-active-text-color;
+			border: 0.2rem solid $form-control-active-border-color;
+			background-color: $form-control-active-bg-color;
+		}
+
+		&--error {
+			color: $form-control-error-text-color !important;
+			border: 0.2rem solid $form-control-error-border-color !important;
+			background-color: $form-control-error-bg-color !important;
+
+			&::placeholder {
+				color: $form-control-error-text-color;
+			}
+		}
+
+		&--success {
+			color: $form-control-success-text-color !important;
+			border: 0.2rem solid $form-control-success-border-color !important;
+			background-color: $form-control-success-bg-color !important;
+
+			&::placeholder {
+				color: $form-control-success-text-color;
+			}
+		}
+	}
+
+	&__icon {
+		position: absolute;
+		right: 1.5rem;
+		top: 50%;
+		transform: translateY(-50%);
+		font-size: $form-control-fz;
+		color: $form-control-text-color;
+	}
+
+	&__error-icon {
+		color: $form-control-error-text-color;
+		display: none;
+	}
+
+	&__success-icon {
+		color: $form-control-success-text-color;
+		display: none;
+	}
+
+	&--error &__icon,
+	&--success &__icon {
+		display: none;
+	}
+
+	&--error &__error-icon {
+		display: block !important;
+	}
+
+	&--success &__success-icon {
+		display: block !important;
+	}
+}

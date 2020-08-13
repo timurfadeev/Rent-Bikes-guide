@@ -1,0 +1,22 @@
+.code {
+	&__title {
+		margin-bottom: 2.5rem;
+		color: $text-blue;
+		font-size: $fz-title;
+		text-transform: uppercase;
+		font-weight: normal;
+		font-family: $secondary-font;
+	}
+
+	&__text {
+		font-size: $fz-list;
+		line-height: $lh-section;
+	}
+
+	&__item {
+		padding: 0 0.5rem;
+		border: $brdr-pre;
+		color: $text-pre;
+		background-color: $bg-pre;
+	}
+}

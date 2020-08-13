@@ -1,0 +1,21 @@
+.ordered {
+
+	&__title {
+		margin-bottom: 2.5rem;
+		color: $text-blue;
+		font-size: $fz-title;
+		text-transform: uppercase;
+		font-weight: normal;
+		font-family: $secondary-font;
+	}
+
+	&-list {
+		font-size: $fz-list;
+		margin-left: 2rem;
+
+		&__num {
+			line-height: $lh-section;
+			margin-left: 2rem;
+		}
+	}
+}
